@@ -17,6 +17,43 @@ The project is designed as a **production-readiness reference** — every archit
 
 ---
 
+## Application Screenshots
+
+### User Interface
+
+<div align="center">
+<table>
+<tr>
+<td align="center">
+<img src="../images/application-1.png" width="300" alt="Application Screenshot 1" />
+<br/><sub>Browse & Discover Restaurants</sub>
+</td>
+<td align="center">
+<img src="../images/application-2.png" width="300" alt="Application Screenshot 2" />
+<br/><sub>Place Your Order</sub>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="../images/application-3.png" width="300" alt="Application Screenshot 3" />
+<br/><sub>Order Management</sub>
+</td>
+<td align="center">
+<img src="../images/application-ai.png" width="300" alt="AI Agent Assistant" />
+<br/><sub>AI-Powered Chat Assistant</sub>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+<img src="../images/pay-1.png" width="300" alt="Payment Gateway" />
+<br/><sub>Secure Payment Processing</sub>
+</td>
+</tr>
+</table>
+</div>
+
+---
+
 ## Architecture
 
 ```
@@ -260,6 +297,40 @@ Log in with your Keycloak SSO credentials (OIDC) — no shared kubeconfig files 
 | **Prometheus** | Scrapes `/metrics` from all pods | `monitoring` namespace |
 | **Grafana** | Dashboards — CPU, memory, request rate, error rate per service | port-forward or Ingress |
 | **Loki** | Log aggregation across all namespaces | Queried via Grafana |
+
+### Monitoring Dashboards
+
+<div align="center">
+<table>
+<tr>
+<td align="center">
+<img src="../images/grafana.png" width="350" alt="Grafana Dashboards" />
+<br/><sub><strong>Grafana</strong> — Real-time metrics & dashboards</sub>
+</td>
+<td align="center">
+<img src="../images/loki.png" width="350" alt="Loki Log Aggregation" />
+<br/><sub><strong>Loki</strong> — Centralized log aggregation</sub>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="../images/headlamp.png" width="350" alt="Headlamp K8s UI" />
+<br/><sub><strong>Headlamp</strong> — Kubernetes cluster UI</sub>
+</td>
+<td align="center">
+<img src="../images/oidc.png" width="350" alt="Keycloak OIDC" />
+<br/><sub><strong>Keycloak OIDC</strong> — Secure authentication</sub>
+</td>
+</tr>
+</table>
+</div>
+
+### Alerting & Notifications
+
+<div align="center">
+<img src="../images/slack.png" width="400" alt="Slack Notifications" />
+<br/><sub>Slack alerts for production deployments & cluster events</sub>
+</div>
 
 ---
 
